@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  QRScanner
+
+  Created by Samet Karakurt on 18.09.2022.
+  
+*/
+
+"generate" = "Generate";
+"scanner" = "Scanner";
+"history" = "History";
