@@ -20,7 +20,12 @@ struct TabWidget: View {
                 Spacer()
                 switch viewRouter.currentPage {
                 case.generate:
-                    GenerateView()
+                    NavigationView{
+                        GenerateView()
+                            .navigationTitle("generate")
+                            .navigationBarHidden(true)
+                    }
+                    
                 case.scanner:
                     ScannerView()
                 case.history:
@@ -43,7 +48,7 @@ struct TabWidget: View {
                                 .frame(width: geometry.size.width/9-7, height: geometry.size.width/9-7)
                                 .foregroundColor(Color.black)
                         }
-                        .offset(y: -geometry.size.height/8/2)
+                        .offset(y: -geometry.size.height/9/2)
                         .onTapGesture {
                             viewRouter.currentPage = .scanner
                         }
@@ -52,7 +57,7 @@ struct TabWidget: View {
                         TabBarIcon(viewRouter: viewRouter, assignedPage: .history, width: geometry.size.width/3, height: geometry.size.height/28, systemIconName: "tray", tabName: "history".localized())
                     }
                     .padding()
-                    .frame(width: geometry.size.width, height: geometry.size.height/8)
+                    .frame(width: geometry.size.width, height: geometry.size.height/9)
                     .background(Color.mineShaft)
                     .shadow(radius: 2)
                     
