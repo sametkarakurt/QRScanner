@@ -20,7 +20,7 @@ struct IconItems {
             case .youtube:
                 return "Youtube"
             case .instagram:
-                return "Instragram"
+                return "Instagram"
             case .wifi:
                 return "Wifi"
             case .telephoneDirectory:
