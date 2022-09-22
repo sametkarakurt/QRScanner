@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Localize_Swift
 
 struct GenerateView: View {
     @ObservedObject var categoryProvider = CategoryProvider()
@@ -24,7 +25,7 @@ struct GenerateView: View {
                                 .frame(width: 50, height: 50)
                                 .padding(.top)
                             VStack{
-                                Text(category.categoryName)
+                                Text(category.categoryName.localized())
                                     .font(.headline)
                                     .foregroundColor(.black)
                                 

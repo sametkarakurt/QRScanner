@@ -33,6 +33,14 @@
 		25D1DE6228DB926E00C4DFC0 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE6128DB926E00C4DFC0 /* Forms.swift */; };
 		25D1DE6728DB92E000C4DFC0 /* FormManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE6628DB92E000C4DFC0 /* FormManagerProtocol.swift */; };
 		25D1DE6A28DB936B00C4DFC0 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE6928DB936B00C4DFC0 /* FormView.swift */; };
+		25D1DE6D28DBB3E400C4DFC0 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE6C28DBB3E400C4DFC0 /* Email.swift */; };
+		25D1DE6F28DBB3EE00C4DFC0 /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE6E28DBB3EE00C4DFC0 /* Spotify.swift */; };
+		25D1DE7128DBB3F700C4DFC0 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE7028DBB3F700C4DFC0 /* Twitter.swift */; };
+		25D1DE7328DBB40500C4DFC0 /* Instagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE7228DBB40500C4DFC0 /* Instagram.swift */; };
+		25D1DE7528DBB85600C4DFC0 /* WhatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE7428DBB85600C4DFC0 /* WhatsApp.swift */; };
+		25D1DE7728DBBE7200C4DFC0 /* WebSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE7628DBBE7200C4DFC0 /* WebSite.swift */; };
+		25D1DE7A28DBC19900C4DFC0 /* Localize_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 25D1DE7928DBC19900C4DFC0 /* Localize_Swift */; };
+		25D1DE7C28DCD13600C4DFC0 /* Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE7B28DCD13600C4DFC0 /* Youtube.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +71,13 @@
 		25D1DE6128DB926E00C4DFC0 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
 		25D1DE6628DB92E000C4DFC0 /* FormManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormManagerProtocol.swift; sourceTree = "<group>"; };
 		25D1DE6928DB936B00C4DFC0 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		25D1DE6C28DBB3E400C4DFC0 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		25D1DE6E28DBB3EE00C4DFC0 /* Spotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
+		25D1DE7028DBB3F700C4DFC0 /* Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
+		25D1DE7228DBB40500C4DFC0 /* Instagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instagram.swift; sourceTree = "<group>"; };
+		25D1DE7428DBB85600C4DFC0 /* WhatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsApp.swift; sourceTree = "<group>"; };
+		25D1DE7628DBBE7200C4DFC0 /* WebSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSite.swift; sourceTree = "<group>"; };
+		25D1DE7B28DCD13600C4DFC0 /* Youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youtube.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				252F41C628D7739C00CF4E66 /* Localize_Swift in Frameworks */,
+				25D1DE7A28DBC19900C4DFC0 /* Localize_Swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +147,7 @@
 		252F419328D72E8700CF4E66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				25D1DE6B28DBB3CA00C4DFC0 /* FormItems */,
 				252F41CA28D7A64B00CF4E66 /* Categories */,
 				252F41BA28D74A7300CF4E66 /* Localizable */,
 				252F419628D72EF100CF4E66 /* Assets */,
@@ -277,6 +294,20 @@
 			path = Form;
 			sourceTree = "<group>";
 		};
+		25D1DE6B28DBB3CA00C4DFC0 /* FormItems */ = {
+			isa = PBXGroup;
+			children = (
+				25D1DE6C28DBB3E400C4DFC0 /* Email.swift */,
+				25D1DE6E28DBB3EE00C4DFC0 /* Spotify.swift */,
+				25D1DE7028DBB3F700C4DFC0 /* Twitter.swift */,
+				25D1DE7228DBB40500C4DFC0 /* Instagram.swift */,
+				25D1DE7428DBB85600C4DFC0 /* WhatsApp.swift */,
+				25D1DE7628DBBE7200C4DFC0 /* WebSite.swift */,
+				25D1DE7B28DCD13600C4DFC0 /* Youtube.swift */,
+			);
+			path = FormItems;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,6 +326,7 @@
 			name = QRScanner;
 			packageProductDependencies = (
 				252F41C528D7739C00CF4E66 /* Localize_Swift */,
+				25D1DE7928DBC19900C4DFC0 /* Localize_Swift */,
 			);
 			productName = QRScanner;
 			productReference = 252F418128D72BD900CF4E66 /* QRScanner.app */;
@@ -327,6 +359,7 @@
 			mainGroup = 252F417828D72BD900CF4E66;
 			packageReferences = (
 				252F41C428D7739C00CF4E66 /* XCRemoteSwiftPackageReference "Localize-Swift" */,
+				25D1DE7828DBC19900C4DFC0 /* XCRemoteSwiftPackageReference "Localize-Swift" */,
 			);
 			productRefGroup = 252F418228D72BD900CF4E66 /* Products */;
 			projectDirPath = "";
@@ -357,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D1DE7C28DCD13600C4DFC0 /* Youtube.swift in Sources */,
 				25D1DE5828DB919400C4DFC0 /* FormSection.swift in Sources */,
 				255CD85828D7B4940005232F /* Icons.swift in Sources */,
 				25D1DE5628DB919400C4DFC0 /* FormManager.swift in Sources */,
@@ -365,17 +399,23 @@
 				25D1DE6228DB926E00C4DFC0 /* Forms.swift in Sources */,
 				252F418728D72BDA00CF4E66 /* ContentView.swift in Sources */,
 				252F41A528D7301B00CF4E66 /* HistoryView.swift in Sources */,
+				25D1DE6D28DBB3E400C4DFC0 /* Email.swift in Sources */,
+				25D1DE7128DBB3F700C4DFC0 /* Twitter.swift in Sources */,
 				252F41AA28D7339A00CF4E66 /* ScannerView.swift in Sources */,
 				252F41CC28D7A68200CF4E66 /* CategoryProvider.swift in Sources */,
 				252F41A828D7339100CF4E66 /* GenerateView.swift in Sources */,
 				25D1DE6728DB92E000C4DFC0 /* FormManagerProtocol.swift in Sources */,
 				25D1DE6A28DB936B00C4DFC0 /* FormView.swift in Sources */,
+				25D1DE7728DBBE7200C4DFC0 /* WebSite.swift in Sources */,
 				255CD85628D7B3170005232F /* CategoryView.swift in Sources */,
+				25D1DE7328DBB40500C4DFC0 /* Instagram.swift in Sources */,
 				252F41B928D7482C00CF4E66 /* TabBarIcon.swift in Sources */,
+				25D1DE7528DBB85600C4DFC0 /* WhatsApp.swift in Sources */,
 				252F41CE28D7A70000CF4E66 /* Category.swift in Sources */,
 				25D1DE5728DB919400C4DFC0 /* FormItem.swift in Sources */,
 				252F41B728D743A300CF4E66 /* Pages.swift in Sources */,
 				252F418528D72BDA00CF4E66 /* QRScannerApp.swift in Sources */,
+				25D1DE6F28DBB3EE00C4DFC0 /* Spotify.swift in Sources */,
 				252F41B428D7434200CF4E66 /* ViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,10 +641,23 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		25D1DE7828DBC19900C4DFC0 /* XCRemoteSwiftPackageReference "Localize-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Localize-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		252F41C528D7739C00CF4E66 /* Localize_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 252F41C428D7739C00CF4E66 /* XCRemoteSwiftPackageReference "Localize-Swift" */;
+			productName = Localize_Swift;
+		};
+		25D1DE7928DBC19900C4DFC0 /* Localize_Swift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 252F41C428D7739C00CF4E66 /* XCRemoteSwiftPackageReference "Localize-Swift" */;
 			productName = Localize_Swift;

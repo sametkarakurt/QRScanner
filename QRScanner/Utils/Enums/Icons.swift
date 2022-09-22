@@ -14,7 +14,7 @@ struct IconItems {
             case .spotify:
                 return "Spotify"
             case .whatsapp:
-                return "Whatsapp"
+                return "WhatsApp"
             case .twitter:
                 return "Twitter"
             case .youtube:
@@ -33,7 +33,10 @@ struct IconItems {
                 return "SMS"
             case .personCard:
                 return "Personal Card"
+            case .webSite:
+                return "webSite"
             }
+            
         }
         
         case spotify = "ic_spotify"
@@ -44,7 +47,7 @@ struct IconItems {
         case wifi = "ic_wifi"
         case telephoneDirectory = "ic_telephoneDirectory"
         case text = "ic_text"
-
+        case webSite = "ic_webSite"
         case mail = "ic_email"
         case sms = "ic_sms"
         case personCard = "ic_identificationCard"
