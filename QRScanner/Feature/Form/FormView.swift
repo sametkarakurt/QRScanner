@@ -9,64 +9,132 @@ import SwiftUI
 import Localize_Swift
 struct FormView: View {
     @StateObject var manager = FormManager()
-    let category: String
+    let category: Category
+    
     var body: some View {
-        Form {
+        VStack{
+            Image(category.categoryImage)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50, height: 50)
+                .padding(.top)
+            
+            Text(category.categoryName.localized())
+                .font(.headline)
+                .foregroundColor(.black)
+                .padding(.vertical)
+                .frame(maxWidth: .infinity)
+            
+        }
+        
+        VStack(alignment: .leading, spacing: 20) {
+            
             
             ForEach($manager.sections) { $section in
                 
-                if(section.key.rawValue == category){
-                    Section {
-                        ForEach($section.items) { $item in
+                if(section.key.rawValue == category.categoryName){
+                    
+                    ForEach($section.items) { $item in
+                        
+                        switch item.kind {
                             
-                            switch item.kind {
-                                
-                            case .text(let config):
+                        case .text(let config):
+                            Section {
                                 TextField(config.title.localized(),text: $item.val)
                                     .textContentType(config.textContentType)
                                     .keyboardType(config.keyboardInputType)
-                            case .phoneNumber(let config):
+                                    .padding()
+                                    .overlay(
+                                        Capsule()
+                                            .stroke(
+                                                Color(category.categoryName)))
+                                
+                                
+                                
+                            }
+                            
+                            
+                        case .phoneNumber(let config):
+                            Section {
                                 TextField(config.title,text: $item.val)
                                     .textContentType(config.textContentType)
                                     .keyboardType(config.keyboardInputType)
-                            case .picker(let config):
+                                    .padding()
+                                    .overlay(
+                                        Capsule()
+                                            .stroke(
+                                                Color(category.categoryName)))
+                            }
+                            
+                        case .textArea(let config):
+                            Section {
                                 
+                                  
+                                    
+                                    TextEditor(text: $item.val)
+                                        .textContentType(config.textContentType)
+                                        .keyboardType(config.keyboardInputType)
+                                        .padding()
+                                        .overlay(
+                                            Rectangle()
+                                                .stroke(
+                                                    Color(category.categoryName)))
+                                
+                                
+                            }
+                            
+                            
+                            
+                        case .picker(let config):
+                            
+                            Section {
                                 Picker(config.title, selection: $item.val) {
                                     ForEach(config.options, id: \.self) {
-                                               Text($0)
-                                           }
-                                       }
-                                       .pickerStyle(.segmented)
-                      
-                                ForEach(config.items, id: \.self) {pickerItem in
+                                        Text($0.localized())
+                                    }
+                                }
+                                .pickerStyle(.segmented)
+                                .padding()
+                                
+                            }
+                            
+                            
+                            ForEach(config.items, id: \.self) {pickerItem in
+                                
+                                if(pickerItem.key.rawValue == item.val){
                                     
-                                    if(pickerItem.key.rawValue == item.val){
-                                        if let pickerVal = item.pickerItemVal {
-                                            switch pickerItem.kind {
-                                            
-                                            case .text(let config):
-                                                TextField(config.title.localized(),text: $item.pickerItemVal)
-                                                    .textContentType(config.textContentType)
-                                                    .keyboardType(config.keyboardInputType)
-                                            case .phoneNumber(let config):
-                                                TextField(config.title,text:  $item.pickerItemVal)
-                                                    .textContentType(config.textContentType)
-                                                    .keyboardType(config.keyboardInputType)
-                                            case .picker(let config):
-                                                Picker(config.title, selection:  $item.pickerItemVal) {
-                                                    ForEach(config.options, id: \.self) {
-                                                                      Text($0)
-                                                    }
-                                                    
-                                                        
-                                                }
-                                                .pickerStyle(.segmented)
-                                                
-                                            
-                                        }
-                                        }
+                                    switch pickerItem.kind {
                                         
-                                       
+                                    case .text(let config):
+                                        TextField(config.title.localized(),text: $item.pickerItemVal)
+                                            .textContentType(config.textContentType)
+                                            .keyboardType(config.keyboardInputType)
+                                            .padding()
+                                            .overlay(
+                                                Capsule()
+                                                    .stroke(
+                                                        Color(category.categoryName)))
+                                    case .phoneNumber(let config):
+                                        TextField(config.title,text:  $item.pickerItemVal)
+                                            .textContentType(config.textContentType)
+                                            .keyboardType(config.keyboardInputType)
+                                    case .textArea(let config):
+                                        TextField(config.title,text:  $item.pickerItemVal)
+                                            .textContentType(config.textContentType)
+                                            .keyboardType(config.keyboardInputType)
+                                        
+                                    case .picker(let config):
+                                        Picker(config.title, selection:  $item.pickerItemVal) {
+                                            ForEach(config.options, id: \.self) {
+                                                Text($0)
+                                            }
+                                            
+                                            
+                                        }
+                                        .pickerStyle(.segmented)
+                                        
+                                        
+                                    }
                                 }
                             }
                             
@@ -74,28 +142,31 @@ struct FormView: View {
                         }
                         
                     }
-                }header: {
-                    if let headerTxt = section.header {
-                        Text(headerTxt.localized())
-                    }
-                } footer: {
-                    if let footerTxt = section.footer {
-                        Text(footerTxt)
-                    }
+                    
                 }
+                
+                
+                
+                
             }
-            
-            
+            Spacer()
             
         }
-    }.onAppear(perform: manager.load)
+        .padding()
+        
+        
+        .onAppear(perform: {
+            manager.load()
+            
+            
+            
+        })
+        
+        
+        
+    }
     
     
-}
 }
 
-struct FormView_Previews: PreviewProvider {
-    static var previews: some View {
-        FormView(category: "Spotify")
-    }
-}
+

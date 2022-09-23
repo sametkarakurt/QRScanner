@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2514CF5228DE34E1003C8B51 /* Sms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514CF5128DE34E1003C8B51 /* Sms.swift */; };
 		252F418528D72BDA00CF4E66 /* QRScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F418428D72BDA00CF4E66 /* QRScannerApp.swift */; };
 		252F418728D72BDA00CF4E66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F418628D72BDA00CF4E66 /* ContentView.swift */; };
 		252F418928D72BDD00CF4E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 252F418828D72BDD00CF4E66 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2514CF5128DE34E1003C8B51 /* Sms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sms.swift; sourceTree = "<group>"; };
 		252F418128D72BD900CF4E66 /* QRScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		252F418428D72BDA00CF4E66 /* QRScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerApp.swift; sourceTree = "<group>"; };
 		252F418628D72BDA00CF4E66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				25D1DE7428DBB85600C4DFC0 /* WhatsApp.swift */,
 				25D1DE7628DBBE7200C4DFC0 /* WebSite.swift */,
 				25D1DE7B28DCD13600C4DFC0 /* Youtube.swift */,
+				2514CF5128DE34E1003C8B51 /* Sms.swift */,
 			);
 			path = FormItems;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				25D1DE7528DBB85600C4DFC0 /* WhatsApp.swift in Sources */,
 				252F41CE28D7A70000CF4E66 /* Category.swift in Sources */,
 				25D1DE5728DB919400C4DFC0 /* FormItem.swift in Sources */,
+				2514CF5228DE34E1003C8B51 /* Sms.swift in Sources */,
 				252F41B728D743A300CF4E66 /* Pages.swift in Sources */,
 				252F418528D72BDA00CF4E66 /* QRScannerApp.swift in Sources */,
 				25D1DE6F28DBB3EE00C4DFC0 /* Spotify.swift in Sources */,

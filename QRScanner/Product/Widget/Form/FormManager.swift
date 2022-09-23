@@ -19,7 +19,8 @@ final class FormManager: ObservableObject, FormManagerImpl {
             twitterSection,
             whatsAppSection,
             webSiteSection,
-            youtubeSection
+            youtubeSection,
+            smsSection
         ]
     }
 }

@@ -13,6 +13,7 @@ extension FormItem {
         case text(config: TextConfig)
         case phoneNumber(config: TextConfig)
         case picker(config: PickerConfig)
+        case textArea(config: TextConfig)
     }
 
 }
@@ -32,6 +33,8 @@ extension FormItem {
         case youtubeUrl
         case youtubeVideo
         case youtubeChannel
+        case smsPhoneNumber
+        case smsText
         
         
     }
@@ -64,5 +67,6 @@ extension FormSection {
         case WhatsApp
         case Youtube
         case webSite
+        case Sms
     }
 }

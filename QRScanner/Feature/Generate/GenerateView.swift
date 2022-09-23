@@ -16,7 +16,7 @@ struct GenerateView: View {
             LazyVGrid(columns: columns){
                 ForEach(categoryProvider.categories){category in
                     NavigationLink{
-                        FormView(category: category.categoryName )
+                        FormView(category: category )
                     } label: {
                         VStack{
                             Image(category.categoryImage)

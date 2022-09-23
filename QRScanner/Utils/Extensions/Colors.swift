@@ -10,4 +10,5 @@ import SwiftUI
 extension Color {
     public static var mineShaft: Color { Color("mineShaft") }
     public static var casablanca: Color { Color("casablanca")}
+    public static var spotify: Color { Color("spotify")}
 }
