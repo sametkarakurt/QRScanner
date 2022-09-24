@@ -139,12 +139,18 @@ struct FormView: View {
                         
                     }
                     
+                    NavigationLink{
+                        QRDetailView(qrImage: generateQR(from: section) )
+                    } label: {
+                        Text("Oluştur")
+                    }
+                    
                 }
                 
-                
-                
+           
                 
             }
+           
             Spacer()
             
         }

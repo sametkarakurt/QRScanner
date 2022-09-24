@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2514C9F628DFA856008912E3 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 2514C9F528DFA856008912E3 /* CodeScanner */; };
+		2514C9F928DFAE34008912E3 /* GenerateQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514C9F828DFAE34008912E3 /* GenerateQR.swift */; };
+		2514C9FC28DFB2AD008912E3 /* QRDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514C9FB28DFB2AD008912E3 /* QRDetailView.swift */; };
 		2514CF5228DE34E1003C8B51 /* Sms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514CF5128DE34E1003C8B51 /* Sms.swift */; };
 		252F418528D72BDA00CF4E66 /* QRScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F418428D72BDA00CF4E66 /* QRScannerApp.swift */; };
 		252F418728D72BDA00CF4E66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F418628D72BDA00CF4E66 /* ContentView.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2514C9F828DFAE34008912E3 /* GenerateQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQR.swift; sourceTree = "<group>"; };
+		2514C9FB28DFB2AD008912E3 /* QRDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetailView.swift; sourceTree = "<group>"; };
 		2514CF5128DE34E1003C8B51 /* Sms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sms.swift; sourceTree = "<group>"; };
 		252F418128D72BD900CF4E66 /* QRScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		252F418428D72BDA00CF4E66 /* QRScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerApp.swift; sourceTree = "<group>"; };
@@ -97,6 +101,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2514C9F728DFAE24008912E3 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				2514C9F828DFAE34008912E3 /* GenerateQR.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		2514C9FA28DFB29B008912E3 /* QRDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2514C9FB28DFB2AD008912E3 /* QRDetailView.swift */,
+			);
+			path = QRDetail;
+			sourceTree = "<group>";
+		};
 		252F417828D72BD900CF4E66 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +159,7 @@
 		252F419228D72E7800CF4E66 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				2514C9FA28DFB29B008912E3 /* QRDetail */,
 				25D1DE6828DB936B00C4DFC0 /* Form */,
 				2548705428D8D8820062A6CD /* Category */,
 				252F41A328D72FFB00CF4E66 /* Scanner */,
@@ -162,6 +183,7 @@
 		252F419528D72EB100CF4E66 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2514C9F728DFAE24008912E3 /* Functions */,
 				25D1DE6328DB92B900C4DFC0 /* Protocols */,
 				252F41C128D76F8400CF4E66 /* Extensions */,
 				252F419D28D72F8900CF4E66 /* Enums */,
@@ -397,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2514C9FC28DFB2AD008912E3 /* QRDetailView.swift in Sources */,
 				25D1DE7C28DCD13600C4DFC0 /* Youtube.swift in Sources */,
 				25D1DE5828DB919400C4DFC0 /* FormSection.swift in Sources */,
 				255CD85828D7B4940005232F /* Icons.swift in Sources */,
@@ -406,6 +429,7 @@
 				25D1DE6228DB926E00C4DFC0 /* Forms.swift in Sources */,
 				252F418728D72BDA00CF4E66 /* ContentView.swift in Sources */,
 				252F41A528D7301B00CF4E66 /* HistoryView.swift in Sources */,
+				2514C9F928DFAE34008912E3 /* GenerateQR.swift in Sources */,
 				25D1DE6D28DBB3E400C4DFC0 /* Email.swift in Sources */,
 				25D1DE7128DBB3F700C4DFC0 /* Twitter.swift in Sources */,
 				252F41AA28D7339A00CF4E66 /* ScannerView.swift in Sources */,
