@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2514C9F628DFA856008912E3 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 2514C9F528DFA856008912E3 /* CodeScanner */; };
 		2514CF5228DE34E1003C8B51 /* Sms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514CF5128DE34E1003C8B51 /* Sms.swift */; };
 		252F418528D72BDA00CF4E66 /* QRScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F418428D72BDA00CF4E66 /* QRScannerApp.swift */; };
 		252F418728D72BDA00CF4E66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F418628D72BDA00CF4E66 /* ContentView.swift */; };
@@ -89,6 +90,7 @@
 			files = (
 				252F41C628D7739C00CF4E66 /* Localize_Swift in Frameworks */,
 				25D1DE7A28DBC19900C4DFC0 /* Localize_Swift in Frameworks */,
+				2514C9F628DFA856008912E3 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +332,7 @@
 			packageProductDependencies = (
 				252F41C528D7739C00CF4E66 /* Localize_Swift */,
 				25D1DE7928DBC19900C4DFC0 /* Localize_Swift */,
+				2514C9F528DFA856008912E3 /* CodeScanner */,
 			);
 			productName = QRScanner;
 			productReference = 252F418128D72BD900CF4E66 /* QRScanner.app */;
@@ -363,6 +366,7 @@
 			packageReferences = (
 				252F41C428D7739C00CF4E66 /* XCRemoteSwiftPackageReference "Localize-Swift" */,
 				25D1DE7828DBC19900C4DFC0 /* XCRemoteSwiftPackageReference "Localize-Swift" */,
+				2514C9F428DFA856008912E3 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 252F418228D72BD900CF4E66 /* Products */;
 			projectDirPath = "";
@@ -566,6 +570,7 @@
 				DEVELOPMENT_TEAM = AL39J4ZF3R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR Codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -595,6 +600,7 @@
 				DEVELOPMENT_TEAM = AL39J4ZF3R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR Codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -637,6 +643,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2514C9F428DFA856008912E3 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		252F41C428D7739C00CF4E66 /* XCRemoteSwiftPackageReference "Localize-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/marmelroy/Localize-Swift";
@@ -656,6 +670,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2514C9F528DFA856008912E3 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2514C9F428DFA856008912E3 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
 		252F41C528D7739C00CF4E66 /* Localize_Swift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 252F41C428D7739C00CF4E66 /* XCRemoteSwiftPackageReference "Localize-Swift" */;

@@ -68,18 +68,14 @@ struct FormView: View {
                             
                         case .textArea(let config):
                             Section {
-                                
-                                  
-                                    
-                                    TextEditor(text: $item.val)
-                                        .textContentType(config.textContentType)
-                                        .keyboardType(config.keyboardInputType)
-                                        .padding()
-                                        .overlay(
-                                            Rectangle()
-                                                .stroke(
-                                                    Color(category.categoryName)))
-                                
+                                TextEditor(text: $item.val)
+                                    .textContentType(config.textContentType)
+                                    .keyboardType(config.keyboardInputType)
+                                    .padding()
+                                    .overlay(
+                                        Rectangle()
+                                            .stroke(
+                                                Color(category.categoryName)))
                                 
                             }
                             

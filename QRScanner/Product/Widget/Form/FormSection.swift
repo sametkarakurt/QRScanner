@@ -13,4 +13,5 @@ struct FormSection: Identifiable {
     let header: String?
     let footer: String?
     var items: [FormItem]
+   
 }

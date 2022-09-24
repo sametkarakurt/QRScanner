@@ -12,3 +12,4 @@ let spotifySingerFormItem = FormItem(key: .instagramUsername, kind: .text(config
 let spotifySongFormItem = FormItem(key: .instagramURL, kind: .text(config: .init(title: "Şarkı Adı", keyboardInputType: .namePhonePad, textContentType: .name)), val: "")
 
 let spotifySection = FormSection(key: .Spotify, header: "Spotify", footer: "", items:[ spotifySingerFormItem,spotifySongFormItem])
+
