@@ -31,8 +31,7 @@ struct FormView: View {
             
             
             ForEach($manager.sections) { $section in
-                
-                if(section.key.rawValue == category.categoryName){
+                       if(section.key.rawValue == category.categoryName){
                     
                     ForEach($section.items) { $item in
                         

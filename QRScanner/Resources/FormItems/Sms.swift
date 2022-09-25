@@ -11,4 +11,4 @@ let smsPhoneNumberFormItem = FormItem(key: .smsPhoneNumber, kind: .phoneNumber(c
 
 let smsTextFormItem = FormItem(key: .smsText, kind: .textArea(config: .init(title: "Lütfen bir şeyler girin", keyboardInputType: .default, textContentType: .name)), val: "")
 
-let smsSection = FormSection(key: .Sms, header: "SMS", footer: "", items:[ smsPhoneNumberFormItem,smsTextFormItem])
+let smsSection = FormSection(key: .Sms, header: "SMS", footer: "", items:[ smsPhoneNumberFormItem,smsTextFormItem], qrData: "\(smsPhoneNumberFormItem.val)\n\(smsTextFormItem.val)")

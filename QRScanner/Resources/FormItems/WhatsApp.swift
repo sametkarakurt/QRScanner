@@ -9,4 +9,4 @@ import Foundation
 
 let whatsAppFormItem = FormItem(key: .whatsAppPhoneNumber, kind: .phoneNumber(config: .init(title: "WhatsApp", keyboardInputType: .phonePad, textContentType: .telephoneNumber)), val: "")
 
-let whatsAppSection = FormSection(key: .WhatsApp, header: "WhatsApp", footer: "", items:[whatsAppFormItem])
+let whatsAppSection = FormSection(key: .WhatsApp, header: "WhatsApp", footer: "", items:[whatsAppFormItem], qrData: "\(whatsAppFormItem.val)")

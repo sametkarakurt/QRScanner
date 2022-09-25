@@ -11,5 +11,5 @@ let instagramUsernameFormItem = FormItem(key: .instagramUsername, kind: .text(co
 
 let instagramUrlFormItem = FormItem(key: .instagramURL, kind: .text(config: .init(title: "URL", keyboardInputType: .URL, textContentType: .URL)), val: "")
 
-let instagramSection = FormSection(key: .Instagram, header: "Instagram", footer: "", items: [instagramUsernameFormItem,instagramUrlFormItem])
+let instagramSection = FormSection(key: .Instagram, header: "Instagram", footer: "", items: [instagramUsernameFormItem,instagramUrlFormItem],qrData: "\(instagramUsernameFormItem.val)")
 

@@ -32,7 +32,7 @@ struct IconItems {
             case .sms:
                 return "Sms"
             case .personCard:
-                return "Personal Card"
+                return "PersonalCard"
             case .webSite:
                 return "webSite"
             }

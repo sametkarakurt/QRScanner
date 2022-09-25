@@ -11,6 +11,7 @@
 		2514C9F928DFAE34008912E3 /* GenerateQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514C9F828DFAE34008912E3 /* GenerateQR.swift */; };
 		2514C9FC28DFB2AD008912E3 /* QRDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514C9FB28DFB2AD008912E3 /* QRDetailView.swift */; };
 		2514CF5228DE34E1003C8B51 /* Sms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514CF5128DE34E1003C8B51 /* Sms.swift */; };
+		252E21D628E05BAB007D7900 /* PersonalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E21D528E05BAB007D7900 /* PersonalCard.swift */; };
 		252F418528D72BDA00CF4E66 /* QRScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F418428D72BDA00CF4E66 /* QRScannerApp.swift */; };
 		252F418728D72BDA00CF4E66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F418628D72BDA00CF4E66 /* ContentView.swift */; };
 		252F418928D72BDD00CF4E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 252F418828D72BDD00CF4E66 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		2514C9F828DFAE34008912E3 /* GenerateQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQR.swift; sourceTree = "<group>"; };
 		2514C9FB28DFB2AD008912E3 /* QRDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetailView.swift; sourceTree = "<group>"; };
 		2514CF5128DE34E1003C8B51 /* Sms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sms.swift; sourceTree = "<group>"; };
+		252E21D528E05BAB007D7900 /* PersonalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCard.swift; sourceTree = "<group>"; };
 		252F418128D72BD900CF4E66 /* QRScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		252F418428D72BDA00CF4E66 /* QRScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerApp.swift; sourceTree = "<group>"; };
 		252F418628D72BDA00CF4E66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				25D1DE7628DBBE7200C4DFC0 /* WebSite.swift */,
 				25D1DE7B28DCD13600C4DFC0 /* Youtube.swift */,
 				2514CF5128DE34E1003C8B51 /* Sms.swift */,
+				252E21D528E05BAB007D7900 /* PersonalCard.swift */,
 			);
 			path = FormItems;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				252E21D628E05BAB007D7900 /* PersonalCard.swift in Sources */,
 				2514C9FC28DFB2AD008912E3 /* QRDetailView.swift in Sources */,
 				25D1DE7C28DCD13600C4DFC0 /* Youtube.swift in Sources */,
 				25D1DE5828DB919400C4DFC0 /* FormSection.swift in Sources */,

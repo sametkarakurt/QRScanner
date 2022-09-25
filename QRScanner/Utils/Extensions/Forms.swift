@@ -35,6 +35,8 @@ extension FormItem {
         case youtubeChannel
         case smsPhoneNumber
         case smsText
+        case personalCardName
+        case personalCardPhoneNumber
         
         
     }
@@ -68,5 +70,6 @@ extension FormSection {
         case Youtube
         case webSite
         case Sms
+        case PersonalCard
     }
 }

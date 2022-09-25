@@ -11,5 +11,5 @@ let twitterUsernameFormItem = FormItem(key: .twitterUsername, kind: .text(config
 
 let twittermUrlFormItem = FormItem(key: .twitterUrl, kind: .text(config: .init(title: "URL", keyboardInputType: .URL, textContentType: .URL)), val: "")
 
-let twitterSection = FormSection(key: .Twitter, header: "Twitter", footer: "", items: [twitterUsernameFormItem,twittermUrlFormItem])
+let twitterSection = FormSection(key: .Twitter, header: "Twitter", footer: "", items: [twitterUsernameFormItem,twittermUrlFormItem], qrData: "\(twitterUsernameFormItem.val)")
 

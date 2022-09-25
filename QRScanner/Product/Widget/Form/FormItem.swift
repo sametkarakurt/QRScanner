@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FormItem: Identifiable,Hashable {
+struct FormItem: Identifiable, Hashable {
     static func == (lhs: FormItem, rhs: FormItem) -> Bool {
         return lhs.id == rhs.id
     }

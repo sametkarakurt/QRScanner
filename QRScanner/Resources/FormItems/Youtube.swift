@@ -15,4 +15,4 @@ let youtubeVideoFormItem = FormItem(key: .youtubeVideo, kind: .text(config: .ini
 
 let youtubeUrlFormItem = FormItem(key: .youtubeUrl, kind: .text(config: .init(title: "URL", keyboardInputType: .URL, textContentType: .URL)), val: "")
 
-let youtubeSection = FormSection(key: .Youtube, header: "Youtube", footer: "", items: [youtubePickerFormItem])
+let youtubeSection = FormSection(key: .Youtube, header: "Youtube", footer: "", items: [youtubePickerFormItem], qrData: "\(youtubeUrlFormItem.val)")
