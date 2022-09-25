@@ -12,6 +12,7 @@
 		2514C9FC28DFB2AD008912E3 /* QRDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514C9FB28DFB2AD008912E3 /* QRDetailView.swift */; };
 		2514CF5228DE34E1003C8B51 /* Sms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514CF5128DE34E1003C8B51 /* Sms.swift */; };
 		252E21D628E05BAB007D7900 /* PersonalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E21D528E05BAB007D7900 /* PersonalCard.swift */; };
+		252E21D828E06616007D7900 /* QRContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E21D728E06616007D7900 /* QRContents.swift */; };
 		252F418528D72BDA00CF4E66 /* QRScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F418428D72BDA00CF4E66 /* QRScannerApp.swift */; };
 		252F418728D72BDA00CF4E66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F418628D72BDA00CF4E66 /* ContentView.swift */; };
 		252F418928D72BDD00CF4E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 252F418828D72BDD00CF4E66 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		2514C9FB28DFB2AD008912E3 /* QRDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetailView.swift; sourceTree = "<group>"; };
 		2514CF5128DE34E1003C8B51 /* Sms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sms.swift; sourceTree = "<group>"; };
 		252E21D528E05BAB007D7900 /* PersonalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCard.swift; sourceTree = "<group>"; };
+		252E21D728E06616007D7900 /* QRContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRContents.swift; sourceTree = "<group>"; };
 		252F418128D72BD900CF4E66 /* QRScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		252F418428D72BDA00CF4E66 /* QRScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerApp.swift; sourceTree = "<group>"; };
 		252F418628D72BDA00CF4E66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				252F41B628D743A300CF4E66 /* Pages.swift */,
 				255CD85728D7B4940005232F /* Icons.swift */,
+				252E21D728E06616007D7900 /* QRContents.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				252F41B928D7482C00CF4E66 /* TabBarIcon.swift in Sources */,
 				25D1DE7528DBB85600C4DFC0 /* WhatsApp.swift in Sources */,
 				252F41CE28D7A70000CF4E66 /* Category.swift in Sources */,
+				252E21D828E06616007D7900 /* QRContents.swift in Sources */,
 				25D1DE5728DB919400C4DFC0 /* FormItem.swift in Sources */,
 				2514CF5228DE34E1003C8B51 /* Sms.swift in Sources */,
 				252F41B728D743A300CF4E66 /* Pages.swift in Sources */,

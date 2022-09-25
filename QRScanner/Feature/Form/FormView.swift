@@ -16,7 +16,7 @@ struct FormView: View {
             Image(category.categoryImage)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 50, height: 50)
+                .frame(width: 60, height: 60)
                 .padding(.top)
             
             Text(category.categoryName.localized())

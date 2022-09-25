@@ -56,10 +56,14 @@ func generateQR(from section: FormSection) -> UIImage {
             }
 
         case .Youtube:
-            if(item.key == FormItem.Key.spotifySong){
-                qrData += "spotify:search:\(item.val);"
-            }else{
-                qrData += item.val
+            if(item.val == "youtubeUrl"){
+               
+                qrData += "\(item.pickerItemVal)"
+            }else if(item.val == "youtubeChannel"){
+                qrData += "\(QRContents.Contents.youtube.rawValue)channel/\(item.pickerItemVal)"
+            }
+            else if(item.val == "youtubeVideo"){
+                qrData += "\(QRContents.Contents.youtube.rawValue)watch?v=\(item.pickerItemVal)"
             }
 
         case .webSite:
