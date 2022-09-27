@@ -9,19 +9,29 @@ import SwiftUI
 import CodeScanner
 
 struct ScannerView: View {
-    @State private var isShowingScanner = false
+    @State private var isShowDetailScreen = false
+    @State private var details = [String]()
     var body: some View {
-        CodeScannerView(codeTypes: [.qr], completion: handleScan)
+        NavigationView {
+            VStack{
+                CodeScannerView(codeTypes: [.qr], completion: handleScan)
+                NavigationLink(destination: QRScanDetailView(qrContent: details), isActive: $isShowDetailScreen) {
+                    EmptyView()
+                }
+            }
+        
+        }
     }
     
-    func handleScan(result: Result<ScanResult, ScanError>) {
+    func handleScan(result: Result<ScanResult, ScanError>)  {
         switch result {
         case .success(let result):
-            let details = result.string.components(separatedBy: "\n")
-            print(details)
+            details =  result.string.components(separatedBy: "\n")
+            isShowDetailScreen = true
         case .failure(let error):
             print("Scanning failed \(error.localizedDescription)")
         }
+        
     }
 }
 

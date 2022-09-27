@@ -11,12 +11,10 @@ import CoreImage.CIFilterBuiltins
 import SwiftUI
 
 func generateQR(from section: FormSection) -> UIImage {
-    let context = CIContext()
-    let filter = CIFilter.qrCodeGenerator()
+
     var qrData =  ""
-    
-   
-    
+    let context = CIContext()
+       
     for item in section.items {
         switch section.key {
         case .Instagram:
@@ -93,14 +91,37 @@ func generateQR(from section: FormSection) -> UIImage {
   
     }
     
-    filter.message = Data(qrData.utf8)
+    var qrImage = UIImage(systemName: "xmark.circle") ?? UIImage()
+      let data    = Data(qrData.utf8)
+      let filter  = CIFilter.qrCodeGenerator()
+
+      // ref : https://stackoverflow.com/questions/57704885/how-can-i-check-ios-devices-current-userinterfacestyle-programmatically
+      var osTheme: UIUserInterfaceStyle { return UIScreen.main.traitCollection.userInterfaceStyle }
+      filter.setValue(data, forKey: "inputMessage")
+
+      let transform = CGAffineTransform(scaleX: 10, y: 10)
+      if let outputImage = filter.outputImage?.transformed(by: transform) {
+          if let image = context.createCGImage(
+              outputImage,
+              from: outputImage.extent) {
+
+              let maskFilter = CIFilter.blendWithMask()
+              maskFilter.maskImage = outputImage.applyingFilter("CIColorInvert")
+
+              maskFilter.inputImage = CIImage(color: .white)
+
+              let darkCIImage = maskFilter.outputImage!
+              maskFilter.inputImage = CIImage(color: .black)
+
+              let lightCIImage = maskFilter.outputImage!
+
+              let darkImage   = context.createCGImage(darkCIImage, from: darkCIImage.extent).map(UIImage.init)!
+              let lightImage  = context.createCGImage(lightCIImage, from: lightCIImage.extent).map(UIImage.init)!
+
+              qrImage = osTheme == .light ? lightImage : darkImage
+          }
+      }
+      return qrImage
     
-    if let outputImage = filter.outputImage {
-        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
-            return UIImage(cgImage: cgimg)
-        }
-    }
-    
-    return UIImage(systemName:  "xmark.circle") ?? UIImage()
     
 }
