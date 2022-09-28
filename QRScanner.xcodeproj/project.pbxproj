@@ -33,6 +33,7 @@
 		252F41CC28D7A68200CF4E66 /* CategoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F41CB28D7A68200CF4E66 /* CategoryProvider.swift */; };
 		252F41CE28D7A70000CF4E66 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252F41CD28D7A70000CF4E66 /* Category.swift */; };
 		252FAF7928E34FCD0021902C /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FAF7828E34FCD0021902C /* ImageSaver.swift */; };
+		252FAF7D28E38FE30021902C /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FAF7C28E38FE30021902C /* MainButton.swift */; };
 		255CD85628D7B3170005232F /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255CD85528D7B3170005232F /* CategoryView.swift */; };
 		255CD85828D7B4940005232F /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255CD85728D7B4940005232F /* Icons.swift */; };
 		25D1DE5628DB919400C4DFC0 /* FormManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE5328DB919400C4DFC0 /* FormManager.swift */; };
@@ -79,6 +80,7 @@
 		252F41CD28D7A70000CF4E66 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		252FAF7628E34EB50021902C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		252FAF7828E34FCD0021902C /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		252FAF7C28E38FE30021902C /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		255CD85528D7B3170005232F /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		255CD85728D7B4940005232F /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		25D1DE5328DB919400C4DFC0 /* FormManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormManager.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		252F419528D72EB100CF4E66 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				252FAF7A28E38FC70021902C /* Modifiers */,
 				2514C9F728DFAE24008912E3 /* Functions */,
 				25D1DE6328DB92B900C4DFC0 /* Protocols */,
 				252F41C128D76F8400CF4E66 /* Extensions */,
@@ -313,6 +316,22 @@
 				252FAF7828E34FCD0021902C /* ImageSaver.swift */,
 			);
 			path = ImageSaver;
+			sourceTree = "<group>";
+		};
+		252FAF7A28E38FC70021902C /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				252FAF7B28E38FD50021902C /* Buttons */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		252FAF7B28E38FD50021902C /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				252FAF7C28E38FE30021902C /* MainButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		2548705428D8D8820062A6CD /* Category */ = {
@@ -458,6 +477,7 @@
 				25D1DE5628DB919400C4DFC0 /* FormManager.swift in Sources */,
 				252F41AF28D73A5600CF4E66 /* TabWidget.swift in Sources */,
 				252F41C328D771F800CF4E66 /* Colors.swift in Sources */,
+				252FAF7D28E38FE30021902C /* MainButton.swift in Sources */,
 				25D1DE6228DB926E00C4DFC0 /* Forms.swift in Sources */,
 				252F418728D72BDA00CF4E66 /* ContentView.swift in Sources */,
 				252F41A528D7301B00CF4E66 /* HistoryView.swift in Sources */,

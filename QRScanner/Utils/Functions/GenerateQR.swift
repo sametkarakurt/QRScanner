@@ -99,11 +99,11 @@ func generateQR(from section: FormSection) -> UIImage {
       var osTheme: UIUserInterfaceStyle { return UIScreen.main.traitCollection.userInterfaceStyle }
       filter.setValue(data, forKey: "inputMessage")
 
-      let transform = CGAffineTransform(scaleX: 10, y: 10)
+      let transform = CGAffineTransform(scaleX: 100, y: 100)
       if let outputImage = filter.outputImage?.transformed(by: transform) {
-          if let image = context.createCGImage(
-              outputImage,
-              from: outputImage.extent) {
+          if context.createCGImage(
+            outputImage,
+            from: outputImage.extent) != nil {
 
               let maskFilter = CIFilter.blendWithMask()
               maskFilter.maskImage = outputImage.applyingFilter("CIColorInvert")

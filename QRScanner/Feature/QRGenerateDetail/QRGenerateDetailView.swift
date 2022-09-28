@@ -12,18 +12,49 @@ struct QRDetailView: View {
     let imageSaver = ImageSaver()
     var body: some View {
         GeometryReader { geometry in
-            Image(uiImage: qrImage)
-                .resizable()
-                .interpolation(.none)
-                .scaledToFit()
-                .frame(width: geometry.size.width * 0.75)
             
-            Button("Save") {
-               
-                imageSaver.writeToPhotoAlbum(image: qrImage)
+            VStack( spacing: 20){
+                Image(uiImage: qrImage)
+                    .resizable()
+                    .interpolation(.none)
+                    .scaledToFit()
+                    .frame(width: geometry.size.width * 0.75)
+                
+                HStack (spacing:20){
+                    Button("Kaydet") {
+                        
+                        imageSaver.writeToPhotoAlbum(image: qrImage)
+                    }
+                    .mainButtonStyle()
+                    .background(.green)
+                    .clipShape(Capsule())
+                    
+                    Button("Paylaş") {
+                        
+                        share()
+                    }
+                    .mainButtonStyle()
+                    .background(.green)
+                    .clipShape(Capsule())
+                }
+                
+                Spacer()
             }
+            .frame(width:  geometry.size.width , height:  geometry.size.height , alignment: .center)
+            
+            
+            
+            
         }
-  
+        
+        
+    }
+    
+    func share() {
+        
+        let activityController = UIActivityViewController(activityItems: [qrImage], applicationActivities: nil)
+
+            UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
     }
 }
 
