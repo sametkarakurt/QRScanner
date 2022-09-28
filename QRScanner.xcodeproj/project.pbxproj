@@ -36,6 +36,7 @@
 		252FAF7D28E38FE30021902C /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FAF7C28E38FE30021902C /* MainButton.swift */; };
 		255CD85628D7B3170005232F /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255CD85528D7B3170005232F /* CategoryView.swift */; };
 		255CD85828D7B4940005232F /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255CD85728D7B4940005232F /* Icons.swift */; };
+		256EF29B28E4571300D8B8BB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256EF29A28E4571300D8B8BB /* DataController.swift */; };
 		25D1DE5628DB919400C4DFC0 /* FormManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE5328DB919400C4DFC0 /* FormManager.swift */; };
 		25D1DE5728DB919400C4DFC0 /* FormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE5428DB919400C4DFC0 /* FormItem.swift */; };
 		25D1DE5828DB919400C4DFC0 /* FormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE5528DB919400C4DFC0 /* FormSection.swift */; };
@@ -50,6 +51,9 @@
 		25D1DE7728DBBE7200C4DFC0 /* WebSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE7628DBBE7200C4DFC0 /* WebSite.swift */; };
 		25D1DE7A28DBC19900C4DFC0 /* Localize_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 25D1DE7928DBC19900C4DFC0 /* Localize_Swift */; };
 		25D1DE7C28DCD13600C4DFC0 /* Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE7B28DCD13600C4DFC0 /* Youtube.swift */; };
+		25E7F03228E45F9900063B4E /* QRScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25E7F03028E45F9900063B4E /* QRScanner.xcdatamodeld */; };
+		25EB2E2928E4782900009458 /* GeneratedQRDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EB2E2828E4782900009458 /* GeneratedQRDetail.swift */; };
+		25EB2E2B28E48B4600009458 /* FirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EB2E2A28E48B4600009458 /* FirstAppear.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +87,7 @@
 		252FAF7C28E38FE30021902C /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		255CD85528D7B3170005232F /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		255CD85728D7B4940005232F /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		256EF29A28E4571300D8B8BB /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		25D1DE5328DB919400C4DFC0 /* FormManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormManager.swift; sourceTree = "<group>"; };
 		25D1DE5428DB919400C4DFC0 /* FormItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormItem.swift; sourceTree = "<group>"; };
 		25D1DE5528DB919400C4DFC0 /* FormSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSection.swift; sourceTree = "<group>"; };
@@ -96,6 +101,9 @@
 		25D1DE7428DBB85600C4DFC0 /* WhatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsApp.swift; sourceTree = "<group>"; };
 		25D1DE7628DBBE7200C4DFC0 /* WebSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSite.swift; sourceTree = "<group>"; };
 		25D1DE7B28DCD13600C4DFC0 /* Youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youtube.swift; sourceTree = "<group>"; };
+		25E7F03128E45F9900063B4E /* QRScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QRScanner.xcdatamodel; sourceTree = "<group>"; };
+		25EB2E2828E4782900009458 /* GeneratedQRDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedQRDetail.swift; sourceTree = "<group>"; };
+		25EB2E2A28E48B4600009458 /* FirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppear.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,7 @@
 				252F418628D72BDA00CF4E66 /* ContentView.swift */,
 				252F418828D72BDD00CF4E66 /* Assets.xcassets */,
 				252F418A28D72BDD00CF4E66 /* Preview Content */,
+				25E7F03028E45F9900063B4E /* QRScanner.xcdatamodeld */,
 			);
 			path = QRScanner;
 			sourceTree = "<group>";
@@ -193,6 +202,8 @@
 		252F419328D72E8700CF4E66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				25EB2E2728E4781B00009458 /* QR */,
+				256EF29928E456F700D8B8BB /* CoreData */,
 				252FAF7728E34FAD0021902C /* ImageSaver */,
 				25D1DE6B28DBB3CA00C4DFC0 /* FormItems */,
 				252F41CA28D7A64B00CF4E66 /* Categories */,
@@ -297,6 +308,7 @@
 			children = (
 				252F41C228D771F700CF4E66 /* Colors.swift */,
 				25D1DE6128DB926E00C4DFC0 /* Forms.swift */,
+				25EB2E2A28E48B4600009458 /* FirstAppear.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +354,14 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		256EF29928E456F700D8B8BB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				256EF29A28E4571300D8B8BB /* DataController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		25D1DE5228DB919400C4DFC0 /* Form */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +402,14 @@
 				252E21D528E05BAB007D7900 /* PersonalCard.swift */,
 			);
 			path = FormItems;
+			sourceTree = "<group>";
+		};
+		25EB2E2728E4781B00009458 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				25EB2E2828E4782900009458 /* GeneratedQRDetail.swift */,
+			);
+			path = QR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,6 +510,7 @@
 				252F418728D72BDA00CF4E66 /* ContentView.swift in Sources */,
 				252F41A528D7301B00CF4E66 /* HistoryView.swift in Sources */,
 				2514C9F928DFAE34008912E3 /* GenerateQR.swift in Sources */,
+				25E7F03228E45F9900063B4E /* QRScanner.xcdatamodeld in Sources */,
 				25D1DE6D28DBB3E400C4DFC0 /* Email.swift in Sources */,
 				25D1DE7128DBB3F700C4DFC0 /* Twitter.swift in Sources */,
 				252F41AA28D7339A00CF4E66 /* ScannerView.swift in Sources */,
@@ -495,11 +524,14 @@
 				252F41B928D7482C00CF4E66 /* TabBarIcon.swift in Sources */,
 				25D1DE7528DBB85600C4DFC0 /* WhatsApp.swift in Sources */,
 				252F41CE28D7A70000CF4E66 /* Category.swift in Sources */,
+				25EB2E2B28E48B4600009458 /* FirstAppear.swift in Sources */,
 				252E21D828E06616007D7900 /* QRContents.swift in Sources */,
 				25D1DE5728DB919400C4DFC0 /* FormItem.swift in Sources */,
 				2514CF5228DE34E1003C8B51 /* Sms.swift in Sources */,
 				252F41B728D743A300CF4E66 /* Pages.swift in Sources */,
 				252F418528D72BDA00CF4E66 /* QRScannerApp.swift in Sources */,
+				25EB2E2928E4782900009458 /* GeneratedQRDetail.swift in Sources */,
+				256EF29B28E4571300D8B8BB /* DataController.swift in Sources */,
 				252E21DB28E233D6007D7900 /* QRScanDetailView.swift in Sources */,
 				25D1DE6F28DBB3EE00C4DFC0 /* Spotify.swift in Sources */,
 				252F41B428D7434200CF4E66 /* ViewRouter.swift in Sources */,
@@ -768,6 +800,19 @@
 			productName = Localize_Swift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		25E7F03028E45F9900063B4E /* QRScanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				25E7F03128E45F9900063B4E /* QRScanner.xcdatamodel */,
+			);
+			currentVersion = 25E7F03128E45F9900063B4E /* QRScanner.xcdatamodel */;
+			path = QRScanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 252F417928D72BD900CF4E66 /* Project object */;
 }

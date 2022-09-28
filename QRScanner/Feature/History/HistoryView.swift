@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct HistoryView: View {
+    @State private var historySelection = "Generate"
+    @FetchRequest(sortDescriptors: []) var generatedQR: FetchedResults<GeneratedQR>
+    
+    var options = ["Generate", "Scan"]
     var body: some View {
-        Text("History!")
+        VStack{
+          
+            
+            List(generatedQR) { item in
+                Text(item.type ?? "Unknown")
+            }
+            
+            
+        }
+        
     }
 }
 

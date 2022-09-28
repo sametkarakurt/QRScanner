@@ -7,23 +7,28 @@
 
 import SwiftUI
 
-struct QRDetailView: View {
-    let qrImage: UIImage
+struct QRGenerateDetailView: View {
+    let qrDetail: GeneratedQRDetail
     let imageSaver = ImageSaver()
+    @Environment(\.managedObjectContext) var moc
     var body: some View {
         GeometryReader { geometry in
             
             VStack( spacing: 20){
-                Image(uiImage: qrImage)
+                
+                
+                Image(uiImage: qrDetail.qrCode)
                     .resizable()
                     .interpolation(.none)
                     .scaledToFit()
                     .frame(width: geometry.size.width * 0.75)
                 
+                
+                
                 HStack (spacing:20){
                     Button("Kaydet") {
                         
-                        imageSaver.writeToPhotoAlbum(image: qrImage)
+                        imageSaver.writeToPhotoAlbum(image: qrDetail.qrCode)
                     }
                     .mainButtonStyle()
                     .background(.green)
@@ -44,22 +49,31 @@ struct QRDetailView: View {
             
             
             
-            
+        }
+        .onFirstAppear {
+            save()
         }
         
         
     }
     
+    
     func share() {
         
-        let activityController = UIActivityViewController(activityItems: [qrImage], applicationActivities: nil)
-
-            UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
+        let activityController = UIActivityViewController(activityItems: [qrDetail.qrCode], applicationActivities: nil)
+        
+        UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
+    }
+    
+    func save() {
+        
+        let savedQR = GeneratedQR(context: moc)
+        savedQR.id = UUID()
+        savedQR.data = qrDetail.qrData
+        savedQR.type = qrDetail.qrType
+        savedQR.qrCode = qrDetail.qrCode.jpegData(compressionQuality: 1.0)
+        try? moc.save()
+        
     }
 }
 
-struct QRDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        QRDetailView(qrImage: UIImage())
-    }
-}
