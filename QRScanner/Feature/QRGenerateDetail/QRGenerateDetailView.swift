@@ -9,12 +9,33 @@ import SwiftUI
 
 struct QRGenerateDetailView: View {
     let qrDetail: GeneratedQRDetail
+    let icon: String
     let imageSaver = ImageSaver()
+    let isGenerated: Bool
     @Environment(\.managedObjectContext) var moc
     var body: some View {
         GeometryReader { geometry in
             
             VStack( spacing: 20){
+                
+                VStack{
+                    HStack(alignment: .center){
+                        Image(icon)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 60, height: 60)
+                        Text(qrDetail.qrType)
+                            .font(.headline)
+                    }
+                
+                    
+                    Text(qrDetail.qrData)
+                        .font(.headline)
+                        .foregroundColor(.black)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                    
+                }
                 
                 
                 Image(uiImage: qrDetail.qrCode)
@@ -66,13 +87,15 @@ struct QRGenerateDetailView: View {
     }
     
     func save() {
-        
-        let savedQR = GeneratedQR(context: moc)
-        savedQR.id = UUID()
-        savedQR.data = qrDetail.qrData
-        savedQR.type = qrDetail.qrType
-        savedQR.qrCode = qrDetail.qrCode.jpegData(compressionQuality: 1.0)
-        try? moc.save()
+        if(!isGenerated){
+            let savedQR = GeneratedQR(context: moc)
+            savedQR.id = UUID()
+            savedQR.icon = icon
+            savedQR.data = qrDetail.qrData
+            savedQR.type = qrDetail.qrType
+            savedQR.qrCode = qrDetail.qrCode.jpegData(compressionQuality: 1.0)
+            try? moc.save()
+        }
         
     }
 }

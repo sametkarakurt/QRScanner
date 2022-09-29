@@ -12,8 +12,9 @@ import SwiftUI
 
 func generateQR(from section: FormSection) -> GeneratedQRDetail {
     
-
+    
     var qrData =  ""
+    var titleData = ""
     let context = CIContext()
     
     for item in section.items {
@@ -26,11 +27,11 @@ func generateQR(from section: FormSection) -> GeneratedQRDetail {
             }
             
         case .Spotify:
-        
+            
             if(item.key == FormItem.Key.spotifySinger){
                 qrData += "spotify:search:\(item.val);"
             }else if(item.key == FormItem.Key.spotifySong){
-        
+                
                 qrData += item.val
             }
         case .Mail:
@@ -122,8 +123,24 @@ func generateQR(from section: FormSection) -> GeneratedQRDetail {
         }
     }
     
-    let generatedQR = GeneratedQRDetail(qrData: qrData, qrType: section.key.rawValue, qrCode: qrImage)
- 
+    if(section.key == FormSection.Key.Spotify){
+        for item in section.items {
+            if(item.key == FormItem.Key.spotifySinger){
+                titleData += "\(item.val)" + " "
+                
+            }else{
+                titleData += item.val
+            }
+            
+        }
+    } else if (section.key == FormSection.Key.Youtube ){
+        titleData  = section.items[0].pickerItemVal
+    } else {
+        titleData  = section.items[0].val
+    }
+    
+    let generatedQR = GeneratedQRDetail(qrData: titleData, qrType: section.key.rawValue, qrCode: qrImage)
+    
     return generatedQR
     
     
