@@ -7,7 +7,14 @@
         <attribute name="qrCode" optional="YES" attributeType="Binary"/>
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="ScannedQR" representedClassName="ScannedQR" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="qrContent" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="GeneratedQR" positionX="-45" positionY="0" width="128" height="104"/>
+        <element name="ScannedQR" positionX="-45" positionY="36" width="128" height="89"/>
     </elements>
 </model>
