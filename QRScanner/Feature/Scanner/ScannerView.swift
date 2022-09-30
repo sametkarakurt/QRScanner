@@ -11,7 +11,7 @@ import CodeScanner
 struct ScannerView: View {
     @State private var isShowDetailScreen = false
     @State private var details = [String]()
-    @State private var scannedQRDetail = ScannedQRDetail(qrContent: "", type: "", data: "")
+    @State private var scannedQRDetail = ScannedQRDetail(qrContent: [""], type: "", data: "")
     var body: some View {
         NavigationView {
             VStack{
@@ -51,7 +51,7 @@ struct ScannerView: View {
                 }
             }
             scannedQRDetail.type = type
-            scannedQRDetail.data = result
+            scannedQRDetail.qrContent = details
             isShowDetailScreen = true
         case .failure(let error):
             print("Scanning failed \(error.localizedDescription)")

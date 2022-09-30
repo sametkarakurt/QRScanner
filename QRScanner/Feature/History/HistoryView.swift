@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import UIKit
+import CoreData
 
 struct HistoryView: View {
     @Environment(\.managedObjectContext) var moc
@@ -51,6 +53,10 @@ struct HistoryView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Delete All") {
+                        deleteAll()
+                    }                }
             }
             
         }
@@ -64,6 +70,17 @@ struct HistoryView: View {
             moc.delete(item)
             try? moc.save()
         }
+    }
+    
+    func deleteAll() {
+
+        let fetchRequest = GeneratedQR.fetchRequest()
+        let items = try? moc.fetch(fetchRequest)
+        for item in items ?? [] {
+            moc.delete(item)
+        }
+        try? moc.save()
+        
     }
     
     
