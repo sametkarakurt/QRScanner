@@ -9,11 +9,13 @@ import SwiftUI
 
 struct QRGenerateDetailView: View {
     @State var qrDetail: GeneratedQRDetail
-
+    let qrSection: FormSection?
     let icon: String
     let imageSaver = ImageSaver()
     let isGenerated: Bool
     @Environment(\.managedObjectContext) var moc
+  
+   
     var body: some View {
         GeometryReader { geometry in
             
@@ -47,7 +49,7 @@ struct QRGenerateDetailView: View {
                 
                 NavigationLink {
                    
-                    QRBeautifyView(qrImage: $qrDetail.qrCode)
+                    QRBeautifyView(qrDetail: $qrDetail,section: qrSection!)
                 } label: {
                     Text("Beautify")
                 }

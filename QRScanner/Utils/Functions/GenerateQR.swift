@@ -10,7 +10,7 @@ import CoreImage
 import CoreImage.CIFilterBuiltins
 import SwiftUI
 
-func generateQR(from section: FormSection) -> GeneratedQRDetail {
+func generateQR(from section: FormSection,qrColor: Color) -> GeneratedQRDetail {
     
     
     var qrData =  ""
@@ -112,7 +112,7 @@ func generateQR(from section: FormSection) -> GeneratedQRDetail {
             maskFilter.inputImage = CIImage(color: .white)
             
             let darkCIImage = maskFilter.outputImage!
-            maskFilter.inputImage = CIImage(color: .black)
+            maskFilter.inputImage = CIImage(color: CIColor(color: UIColor(qrColor)))
             
             let lightCIImage = maskFilter.outputImage!
             

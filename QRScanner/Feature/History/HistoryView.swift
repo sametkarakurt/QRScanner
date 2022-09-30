@@ -32,7 +32,7 @@ struct HistoryView: View {
                         ForEach(generatedQR) { item in
                             NavigationLink {
                                 let savedQRDetail = GeneratedQRDetail(qrData: item.data!, qrType: item.type!, qrCode: UIImage(data: item.qrCode!)!)
-                                QRGenerateDetailView(qrDetail: savedQRDetail, icon: item.icon ?? "Unknown", isGenerated: true)
+                                QRGenerateDetailView(qrDetail: savedQRDetail,qrSection: FormSection(key: FormSection.Key.Youtube, header: "", footer: "", items: [], qrData: ""), icon: item.icon ?? "Unknown", isGenerated: true)
                             } label: {
                                 HStack(spacing: 20){
                                     

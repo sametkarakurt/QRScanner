@@ -139,7 +139,7 @@ struct FormView: View {
                     }
                     
                     NavigationLink{
-                        QRGenerateDetailView(qrDetail: generateQR(from: section), icon: category.categoryImage, isGenerated:false)
+                        QRGenerateDetailView(qrDetail: generateQR(from: section, qrColor: .black), qrSection: section, icon: category.categoryImage, isGenerated:false)
                     } label: {
                         Text("Oluştur")
                     }
