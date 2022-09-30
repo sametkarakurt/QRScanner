@@ -61,7 +61,7 @@ extension FormItem.Kind{
 
 
 extension FormSection {
-    enum Key: String {
+    enum Key: String{
         case Instagram
         case Spotify
         case Mail

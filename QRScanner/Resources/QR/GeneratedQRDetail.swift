@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct GeneratedQRDetail {
+struct GeneratedQRDetail{
     var qrData: String
     var qrType: String
     var qrCode: UIImage

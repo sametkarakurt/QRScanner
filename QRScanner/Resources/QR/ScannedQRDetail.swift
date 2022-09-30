@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct ScannedQRDetail{
-    var qrContent: [String]
     var type: String
     var data: String
+    var icon: String
 }

@@ -13,39 +13,77 @@ struct HistoryView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var historySelection = "Generate"
     @FetchRequest(sortDescriptors: []) var generatedQR: FetchedResults<GeneratedQR>
-    
+    @FetchRequest(sortDescriptors: []) var scannedQR: FetchedResults<ScannedQR>
     var options = ["Generate", "Scan"]
     var body: some View {
         NavigationView{
             VStack{
-                
-                List {
-                    ForEach(generatedQR) { item in
-                        NavigationLink {
-                            let savedQRDetail = GeneratedQRDetail(qrData: item.data!, qrType: item.type!, qrCode: UIImage(data: item.qrCode!)!)
-                            QRGenerateDetailView(qrDetail: savedQRDetail, icon: item.icon ?? "Unknown", isGenerated: true)
-                        } label: {
-                            HStack(spacing: 20){
-                                
-                                Image(item.icon ?? "Unknown")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50)
-                                
-                                VStack(alignment: .leading){
-                                    Text(item.data!)
-                                        .lineLimit(1)
-                                        .font(.headline)
-                                    Text(item.type!)
-                                        .foregroundColor(.secondary)
-                                    
+                Picker("Please choose a color", selection: $historySelection) {
+                                ForEach(options, id: \.self) {
+                                    Text($0)
                                 }
                             }
-                            
+                .pickerStyle(.segmented)
+                .colorMultiply(.secondary)
+                .background(.white)
+                .padding()
+                if(historySelection == "Generate") {
+                    List {
+                        ForEach(generatedQR) { item in
+                            NavigationLink {
+                                let savedQRDetail = GeneratedQRDetail(qrData: item.data!, qrType: item.type!, qrCode: UIImage(data: item.qrCode!)!)
+                                QRGenerateDetailView(qrDetail: savedQRDetail, icon: item.icon ?? "Unknown", isGenerated: true)
+                            } label: {
+                                HStack(spacing: 20){
+                                    
+                                    Image(item.icon ?? "Unknown")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 50, height: 50)
+                                    
+                                    VStack(alignment: .leading){
+                                        Text(item.data!)
+                                            .lineLimit(1)
+                                            .font(.headline)
+                                        Text(item.type!)
+                                            .foregroundColor(.secondary)
+                                        
+                                    }
+                                }
+                                
+                            }
                         }
+                        .onDelete(perform: deleteGeneratedQR)
                     }
-                    .onDelete(perform: deleteGeneratedQR)
+                }else {
+                    List  {
+                        ForEach(scannedQR) { item in
+                            NavigationLink {
+                                QRScanDetailView(scannedQRDetail: ScannedQRDetail(type: item.type!, data: item.data!, icon: item.icon!),isScanned: false)
+                            } label: {
+                                HStack(spacing: 20){
+                                    
+                                    Image(item.icon ?? "Unknown")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 50, height: 50)
+                                    
+                                    VStack(alignment: .leading){
+                                        Text(item.data!)
+                                            .lineLimit(1)
+                                            .font(.headline)
+                                        Text(item.type!)
+                                            .foregroundColor(.secondary)
+                                        
+                                    }
+                                }
+                                
+                            }
+                        }
+                        .onDelete(perform: deleteGeneratedQR)
+                    }
                 }
+                
                 
                 
             }
@@ -65,21 +103,39 @@ struct HistoryView: View {
         
     }
     func deleteGeneratedQR(at offsets: IndexSet) {
-        for offset in offsets {
-            let item = generatedQR[offset]
-            moc.delete(item)
-            try? moc.save()
+        if(historySelection == "Generate") {
+            for offset in offsets {
+                let item = generatedQR[offset]
+                moc.delete(item)
+                try? moc.save()
+            }
+        } else {
+            for offset in offsets {
+                let item = scannedQR[offset]
+                moc.delete(item)
+                try? moc.save()
+            }
         }
+      
     }
     
     func deleteAll() {
-
-        let fetchRequest = GeneratedQR.fetchRequest()
-        let items = try? moc.fetch(fetchRequest)
-        for item in items ?? [] {
-            moc.delete(item)
+        if(historySelection == "Generate"){
+            let fetchRequest = GeneratedQR.fetchRequest()
+            let items = try? moc.fetch(fetchRequest)
+            for item in items ?? [] {
+                moc.delete(item)
+            }
+            try? moc.save()
+        } else {
+            let fetchRequest = ScannedQR.fetchRequest()
+            let items = try? moc.fetch(fetchRequest)
+            for item in items ?? [] {
+                moc.delete(item)
+            }
+            try? moc.save()
         }
-        try? moc.save()
+       
         
     }
     
