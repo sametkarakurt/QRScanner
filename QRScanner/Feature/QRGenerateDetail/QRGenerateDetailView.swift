@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct QRGenerateDetailView: View {
-    let qrDetail: GeneratedQRDetail
+    @State var qrDetail: GeneratedQRDetail
+
     let icon: String
     let imageSaver = ImageSaver()
     let isGenerated: Bool
@@ -43,6 +44,13 @@ struct QRGenerateDetailView: View {
                     .interpolation(.none)
                     .scaledToFit()
                     .frame(width: geometry.size.width * 0.75)
+                
+                NavigationLink {
+                   
+                    QRBeautifyView(qrImage: $qrDetail.qrCode)
+                } label: {
+                    Text("Beautify")
+                }
                 
                 
                 

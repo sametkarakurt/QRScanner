@@ -36,6 +36,8 @@
 		252FAF7D28E38FE30021902C /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FAF7C28E38FE30021902C /* MainButton.swift */; };
 		255CD85628D7B3170005232F /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255CD85528D7B3170005232F /* CategoryView.swift */; };
 		255CD85828D7B4940005232F /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255CD85728D7B4940005232F /* Icons.swift */; };
+		25603D8828E78AB400D2164F /* QRBeautifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25603D8728E78AB400D2164F /* QRBeautifyView.swift */; };
+		25603D8B28E78F6700D2164F /* CustomColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25603D8A28E78F6700D2164F /* CustomColorPicker.swift */; };
 		25614EC328E73147003F397D /* FindType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25614EC228E73147003F397D /* FindType.swift */; };
 		25614EC528E731CC003F397D /* ParseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25614EC428E731CC003F397D /* ParseData.swift */; };
 		25614EC728E76F6F003F397D /* FindIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25614EC628E76F6F003F397D /* FindIcon.swift */; };
@@ -91,6 +93,8 @@
 		252FAF7C28E38FE30021902C /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		255CD85528D7B3170005232F /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		255CD85728D7B4940005232F /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		25603D8728E78AB400D2164F /* QRBeautifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRBeautifyView.swift; sourceTree = "<group>"; };
+		25603D8A28E78F6700D2164F /* CustomColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorPicker.swift; sourceTree = "<group>"; };
 		25614EC228E73147003F397D /* FindType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindType.swift; sourceTree = "<group>"; };
 		25614EC428E731CC003F397D /* ParseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseData.swift; sourceTree = "<group>"; };
 		25614EC628E76F6F003F397D /* FindIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIcon.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 		252F419228D72E7800CF4E66 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				25603D8628E78A9B00D2164F /* QRBeatuify */,
 				252E21D928E23329007D7900 /* QRScanDetail */,
 				2514C9FA28DFB29B008912E3 /* QRGenerateDetail */,
 				25D1DE6828DB936B00C4DFC0 /* Form */,
@@ -290,6 +295,7 @@
 		252F41A628D7333300CF4E66 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				25603D8928E78F5700D2164F /* ColorPicker */,
 				25D1DE5228DB919400C4DFC0 /* Form */,
 				252F41AB28D7342100CF4E66 /* Tab */,
 			);
@@ -363,6 +369,22 @@
 				255CD85528D7B3170005232F /* CategoryView.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		25603D8628E78A9B00D2164F /* QRBeatuify */ = {
+			isa = PBXGroup;
+			children = (
+				25603D8728E78AB400D2164F /* QRBeautifyView.swift */,
+			);
+			path = QRBeatuify;
+			sourceTree = "<group>";
+		};
+		25603D8928E78F5700D2164F /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				25603D8A28E78F6700D2164F /* CustomColorPicker.swift */,
+			);
+			path = ColorPicker;
 			sourceTree = "<group>";
 		};
 		256EF29928E456F700D8B8BB /* CoreData */ = {
@@ -528,12 +550,14 @@
 				25E7F03228E45F9900063B4E /* QRScanner.xcdatamodeld in Sources */,
 				25D1DE6D28DBB3E400C4DFC0 /* Email.swift in Sources */,
 				25D1DE7128DBB3F700C4DFC0 /* Twitter.swift in Sources */,
+				25603D8B28E78F6700D2164F /* CustomColorPicker.swift in Sources */,
 				252F41AA28D7339A00CF4E66 /* ScannerView.swift in Sources */,
 				252F41CC28D7A68200CF4E66 /* CategoryProvider.swift in Sources */,
 				252F41A828D7339100CF4E66 /* GenerateView.swift in Sources */,
 				25D1DE6728DB92E000C4DFC0 /* FormManagerProtocol.swift in Sources */,
 				25D1DE6A28DB936B00C4DFC0 /* FormView.swift in Sources */,
 				25D1DE7728DBBE7200C4DFC0 /* WebSite.swift in Sources */,
+				25603D8828E78AB400D2164F /* QRBeautifyView.swift in Sources */,
 				255CD85628D7B3170005232F /* CategoryView.swift in Sources */,
 				25D1DE7328DBB40500C4DFC0 /* Instagram.swift in Sources */,
 				252F41B928D7482C00CF4E66 /* TabBarIcon.swift in Sources */,

@@ -55,7 +55,7 @@ struct HistoryView: View {
                         }
                         .onDelete(perform: deleteGeneratedQR)
                     }
-                }else {
+                }else{
                     List  {
                         ForEach(scannedQR) { item in
                             NavigationLink {

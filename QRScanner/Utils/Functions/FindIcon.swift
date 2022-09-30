@@ -7,7 +7,7 @@
 
 import Foundation
 
-func findIcon(data: String) -> String {
+func findIcon(data: String) -> String{
 
     for item in IconItems.Category.allCases {
         if(item.description == data){
