@@ -60,6 +60,8 @@
 		25E7F03228E45F9900063B4E /* QRScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25E7F03028E45F9900063B4E /* QRScanner.xcdatamodeld */; };
 		25EB2E2928E4782900009458 /* GeneratedQRDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EB2E2828E4782900009458 /* GeneratedQRDetail.swift */; };
 		25EB2E2B28E48B4600009458 /* FirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EB2E2A28E48B4600009458 /* FirstAppear.swift */; };
+		25EC052828EA288600963492 /* AddToCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EC052728EA288600963492 /* AddToCenter.swift */; };
+		25EC052A28EA366000963492 /* ConvertUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EC052928EA366000963492 /* ConvertUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +118,8 @@
 		25E7F03128E45F9900063B4E /* QRScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QRScanner.xcdatamodel; sourceTree = "<group>"; };
 		25EB2E2828E4782900009458 /* GeneratedQRDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedQRDetail.swift; sourceTree = "<group>"; };
 		25EB2E2A28E48B4600009458 /* FirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppear.swift; sourceTree = "<group>"; };
+		25EC052728EA288600963492 /* AddToCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCenter.swift; sourceTree = "<group>"; };
+		25EC052928EA366000963492 /* ConvertUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +330,8 @@
 				252F41C228D771F700CF4E66 /* Colors.swift */,
 				25D1DE6128DB926E00C4DFC0 /* Forms.swift */,
 				25EB2E2A28E48B4600009458 /* FirstAppear.swift */,
+				25EC052728EA288600963492 /* AddToCenter.swift */,
+				25EC052928EA366000963492 /* ConvertUIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 				25D1DE5628DB919400C4DFC0 /* FormManager.swift in Sources */,
 				252F41AF28D73A5600CF4E66 /* TabWidget.swift in Sources */,
 				252F41C328D771F800CF4E66 /* Colors.swift in Sources */,
+				25EC052828EA288600963492 /* AddToCenter.swift in Sources */,
 				25614EC728E76F6F003F397D /* FindIcon.swift in Sources */,
 				252FAF7D28E38FE30021902C /* MainButton.swift in Sources */,
 				25D1DE6228DB926E00C4DFC0 /* Forms.swift in Sources */,
@@ -552,6 +559,7 @@
 				25D1DE7128DBB3F700C4DFC0 /* Twitter.swift in Sources */,
 				25603D8B28E78F6700D2164F /* CustomColorPicker.swift in Sources */,
 				252F41AA28D7339A00CF4E66 /* ScannerView.swift in Sources */,
+				25EC052A28EA366000963492 /* ConvertUIView.swift in Sources */,
 				252F41CC28D7A68200CF4E66 /* CategoryProvider.swift in Sources */,
 				252F41A828D7339100CF4E66 /* GenerateView.swift in Sources */,
 				25D1DE6728DB92E000C4DFC0 /* FormManagerProtocol.swift in Sources */,
