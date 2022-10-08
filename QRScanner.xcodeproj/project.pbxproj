@@ -43,6 +43,7 @@
 		25614EC728E76F6F003F397D /* FindIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25614EC628E76F6F003F397D /* FindIcon.swift */; };
 		256EF29B28E4571300D8B8BB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256EF29A28E4571300D8B8BB /* DataController.swift */; };
 		25788C9328E5B24400689AD0 /* ScannedQRDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25788C9228E5B24400689AD0 /* ScannedQRDetail.swift */; };
+		25986A7A28F1B801004BA349 /* LogoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25986A7928F1B801004BA349 /* LogoPicker.swift */; };
 		25D1DE5628DB919400C4DFC0 /* FormManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE5328DB919400C4DFC0 /* FormManager.swift */; };
 		25D1DE5728DB919400C4DFC0 /* FormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE5428DB919400C4DFC0 /* FormItem.swift */; };
 		25D1DE5828DB919400C4DFC0 /* FormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE5528DB919400C4DFC0 /* FormSection.swift */; };
@@ -102,6 +103,7 @@
 		25614EC628E76F6F003F397D /* FindIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIcon.swift; sourceTree = "<group>"; };
 		256EF29A28E4571300D8B8BB /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		25788C9228E5B24400689AD0 /* ScannedQRDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedQRDetail.swift; sourceTree = "<group>"; };
+		25986A7928F1B801004BA349 /* LogoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPicker.swift; sourceTree = "<group>"; };
 		25D1DE5328DB919400C4DFC0 /* FormManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormManager.swift; sourceTree = "<group>"; };
 		25D1DE5428DB919400C4DFC0 /* FormItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormItem.swift; sourceTree = "<group>"; };
 		25D1DE5528DB919400C4DFC0 /* FormSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSection.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 		252F41A628D7333300CF4E66 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				25986A7828F1B7EF004BA349 /* LogoPicker */,
 				25603D8928E78F5700D2164F /* ColorPicker */,
 				25D1DE5228DB919400C4DFC0 /* Form */,
 				252F41AB28D7342100CF4E66 /* Tab */,
@@ -399,6 +402,14 @@
 				256EF29A28E4571300D8B8BB /* DataController.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		25986A7828F1B7EF004BA349 /* LogoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				25986A7928F1B801004BA349 /* LogoPicker.swift */,
+			);
+			path = LogoPicker;
 			sourceTree = "<group>";
 		};
 		25D1DE5228DB919400C4DFC0 /* Form */ = {
@@ -546,6 +557,7 @@
 				25614EC328E73147003F397D /* FindType.swift in Sources */,
 				25D1DE5628DB919400C4DFC0 /* FormManager.swift in Sources */,
 				252F41AF28D73A5600CF4E66 /* TabWidget.swift in Sources */,
+				25986A7A28F1B801004BA349 /* LogoPicker.swift in Sources */,
 				252F41C328D771F800CF4E66 /* Colors.swift in Sources */,
 				25EC052828EA288600963492 /* AddToCenter.swift in Sources */,
 				25614EC728E76F6F003F397D /* FindIcon.swift in Sources */,

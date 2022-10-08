@@ -9,9 +9,10 @@ import SwiftUI
 
 struct QRBeautifyView: View {
     @Binding var qrDetail: GeneratedQRDetail
+    @State var selectedLogo = ""
     let section: FormSection
     @State var bgColor = Color.white
-    let logo = UIImage(named: "ic_spotify")!
+    @State var hasLogo = false
 
     var body: some View {
         GeometryReader { geometry in
@@ -23,21 +24,30 @@ struct QRBeautifyView: View {
                     .frame(width: geometry.size.width * 0.75)
                 
                 
-           
+              
+                    CustomColorPicker(selectedColor: $bgColor)
+                        .onChange(of: bgColor, perform: { _ in
+                            
+                            qrDetail.qrCode = generateQR(from: section, qrColor: bgColor,hasLogo: hasLogo,selectedLogo: selectedLogo).qrCode
+                            
+                        })
                 
-                CustomColorPicker(selectedColor: $bgColor)
-                    .onChange(of: bgColor, perform: { _ in
-                        
-                        qrDetail.qrCode = generateQR(from: section, qrColor: bgColor).qrCode
-                        
-                    })
+                
+              
                    
-                ColorPicker("Set the background color", selection: $bgColor)
-                    .padding()
+              
+             
                 
-                Button("Add Label") {
-                    qrDetail.qrCode = addLogo(UIImage(named: "ic_spotify")!, toImage: qrDetail.qrCode)!
-                }
+                LogoPicker(selectedLogo: $selectedLogo).onChange(of: selectedLogo, perform: { _ in
+                    if(hasLogo){
+                        qrDetail.qrCode = generateQR(from: section, qrColor: bgColor,hasLogo: hasLogo,selectedLogo: selectedLogo).qrCode
+                        hasLogo = true
+                    }else {
+                        qrDetail.qrCode = addLogo(UIImage(named: selectedLogo)!, toImage: qrDetail.qrCode)!
+                        hasLogo = true
+                    }
+
+                })
                 
            
                    

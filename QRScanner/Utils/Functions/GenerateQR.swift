@@ -10,7 +10,48 @@ import CoreImage
 import CoreImage.CIFilterBuiltins
 import SwiftUI
 
-func generateQR(from section: FormSection,qrColor: Color) -> GeneratedQRDetail {
+private func addLogo(_ logo: UIImage, toImage image: UIImage) -> UIImage? {
+
+
+
+  // Get size
+  let sizeOfLogo = logo.size
+  let heightOffset = sizeOfLogo.height
+  let width = image.size.width
+  let height = image.size.height
+
+  UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: height), false, 0)
+
+  if let context = UIGraphicsGetCurrentContext() {
+    UIColor.white.setFill()
+    let rect = CGRect(x: 0, y: 0, width: width, height: height)
+    context.fill(rect)
+  }
+
+  // Draw image
+  image.draw(in: CGRect(x: 0, y: 0, width: width, height: image.size.height))
+
+  // Draw text
+  logo.draw(
+    in: CGRect(
+      x: (width / 2) - (sizeOfLogo.width / 2),
+      y: (width / 2) - (sizeOfLogo.width / 2),
+      width:  width/6 ,
+      height: width/6)
+
+  )
+    
+    
+
+  // Get new image
+  let newImage = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext()
+  
+  return newImage
+}
+
+
+func generateQR(from section: FormSection,qrColor: Color, hasLogo: Bool, selectedLogo: String) -> GeneratedQRDetail {
     
     
     var qrData =  ""
@@ -139,8 +180,11 @@ func generateQR(from section: FormSection,qrColor: Color) -> GeneratedQRDetail {
         titleData  = section.items[0].val
     }
     
-    let generatedQR = GeneratedQRDetail(qrData: titleData, qrType: section.key.rawValue, qrCode: qrImage)
-    
+    var generatedQR = GeneratedQRDetail(qrData: titleData, qrType: section.key.rawValue, qrCode: qrImage)
+    if hasLogo {
+        generatedQR.qrCode = addLogo(UIImage(named: selectedLogo)!, toImage:  generatedQR.qrCode)!
+        
+    }
     return generatedQR
     
     
