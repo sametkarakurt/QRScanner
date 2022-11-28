@@ -16,7 +16,7 @@ struct TabWidget: View {
     var body: some View {
         
         GeometryReader { geometry in
-            VStack{
+            VStack(spacing:-5){
                 Spacer()
                 switch viewRouter.currentPage {
                 case.generate:
@@ -24,7 +24,8 @@ struct TabWidget: View {
                         GenerateView()
                             .navigationTitle("generate")
                             .navigationBarHidden(true)
-                    }
+                    }.navigationViewStyle(StackNavigationViewStyle())
+                    
                     
                 case.scanner:
                     ScannerView()
@@ -37,6 +38,7 @@ struct TabWidget: View {
                     HStack{
                         TabBarIcon(viewRouter: viewRouter, assignedPage: .generate, width: geometry.size.width/3, height: geometry.size.height/28, systemIconName: "qrcode", tabName: "generate".localized())
                         Spacer()
+                        
                         ZStack {
                             Circle()
                                 .foregroundColor(Color.casablanca)
@@ -64,6 +66,12 @@ struct TabWidget: View {
                 }
             }
             .edgesIgnoringSafeArea(.bottom)
+            .edgesIgnoringSafeArea(.top)
+
+            
+            NavigationLink(destination: EmptyView()) { // <---- Here
+                             EmptyView()
+                         }
             
         }
     }

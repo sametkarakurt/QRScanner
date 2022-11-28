@@ -12,18 +12,28 @@ struct ScannerView: View {
     @State private var isShowDetailScreen = false
     @State private var details = String()
     @State private var scannedQR = ScannedQRDetail(type: "", data: "",icon: "")
+    
     @Environment(\.managedObjectContext) var moc
     
     var body: some View {
-        NavigationView {
-            VStack{
-                CodeScannerView(codeTypes: [.qr], completion: handleScan)
+        NavigationView{
+            ZStack(alignment: .topLeading){
+                
+         
+                CodeScannerView(codeTypes: [.qr],manualSelect: true,showViewfinder:true, completion: handleScan)
+                   
+                   
                 NavigationLink(destination: QRScanDetailView(scannedQRDetail: scannedQR, isScanned: true), isActive: $isShowDetailScreen) {
                     EmptyView()
                 }
-            }
-            
+                
+
+       
+            }.edgesIgnoringSafeArea(.all)
         }
+           
+
+        
     }
     
     func handleScan(result: Result<ScanResult, ScanError>)  {

@@ -175,7 +175,7 @@ func generateQR(from section: FormSection,qrColor: Color, hasLogo: Bool, selecte
             
         }
     } else if (section.key == FormSection.Key.Youtube ){
-        titleData  = section.items[0].pickerItemVal
+        titleData  = "section.items[0].val"
     } else {
         titleData  = section.items[0].val
     }
