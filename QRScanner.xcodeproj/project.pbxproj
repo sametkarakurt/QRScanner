@@ -42,6 +42,7 @@
 		25614EC528E731CC003F397D /* ParseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25614EC428E731CC003F397D /* ParseData.swift */; };
 		25614EC728E76F6F003F397D /* FindIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25614EC628E76F6F003F397D /* FindIcon.swift */; };
 		256EF29B28E4571300D8B8BB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256EF29A28E4571300D8B8BB /* DataController.swift */; };
+		2574A3AD29350A0F00BB2F49 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2574A3AC29350A0F00BB2F49 /* Navigation.swift */; };
 		25788C9328E5B24400689AD0 /* ScannedQRDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25788C9228E5B24400689AD0 /* ScannedQRDetail.swift */; };
 		25986A7A28F1B801004BA349 /* LogoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25986A7928F1B801004BA349 /* LogoPicker.swift */; };
 		25D1DE5628DB919400C4DFC0 /* FormManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE5328DB919400C4DFC0 /* FormManager.swift */; };
@@ -58,6 +59,7 @@
 		25D1DE7728DBBE7200C4DFC0 /* WebSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE7628DBBE7200C4DFC0 /* WebSite.swift */; };
 		25D1DE7A28DBC19900C4DFC0 /* Localize_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 25D1DE7928DBC19900C4DFC0 /* Localize_Swift */; };
 		25D1DE7C28DCD13600C4DFC0 /* Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1DE7B28DCD13600C4DFC0 /* Youtube.swift */; };
+		25D9DDB82936096D00AA9FD3 /* Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D9DDB72936096D00AA9FD3 /* Navigate.swift */; };
 		25E7F03228E45F9900063B4E /* QRScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25E7F03028E45F9900063B4E /* QRScanner.xcdatamodeld */; };
 		25EB2E2928E4782900009458 /* GeneratedQRDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EB2E2828E4782900009458 /* GeneratedQRDetail.swift */; };
 		25EB2E2B28E48B4600009458 /* FirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EB2E2A28E48B4600009458 /* FirstAppear.swift */; };
@@ -102,6 +104,7 @@
 		25614EC428E731CC003F397D /* ParseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseData.swift; sourceTree = "<group>"; };
 		25614EC628E76F6F003F397D /* FindIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIcon.swift; sourceTree = "<group>"; };
 		256EF29A28E4571300D8B8BB /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		2574A3AC29350A0F00BB2F49 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		25788C9228E5B24400689AD0 /* ScannedQRDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedQRDetail.swift; sourceTree = "<group>"; };
 		25986A7928F1B801004BA349 /* LogoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPicker.swift; sourceTree = "<group>"; };
 		25D1DE5328DB919400C4DFC0 /* FormManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormManager.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 		25D1DE7428DBB85600C4DFC0 /* WhatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsApp.swift; sourceTree = "<group>"; };
 		25D1DE7628DBBE7200C4DFC0 /* WebSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSite.swift; sourceTree = "<group>"; };
 		25D1DE7B28DCD13600C4DFC0 /* Youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youtube.swift; sourceTree = "<group>"; };
+		25D9DDB72936096D00AA9FD3 /* Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigate.swift; sourceTree = "<group>"; };
 		25E7F03128E45F9900063B4E /* QRScanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QRScanner.xcdatamodel; sourceTree = "<group>"; };
 		25EB2E2828E4782900009458 /* GeneratedQRDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedQRDetail.swift; sourceTree = "<group>"; };
 		25EB2E2A28E48B4600009458 /* FirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppear.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				25614EC228E73147003F397D /* FindType.swift */,
 				25614EC428E731CC003F397D /* ParseData.swift */,
 				25614EC628E76F6F003F397D /* FindIcon.swift */,
+				2574A3AC29350A0F00BB2F49 /* Navigation.swift */,
+				25D9DDB72936096D00AA9FD3 /* Navigate.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -577,6 +583,7 @@
 				25D1DE6728DB92E000C4DFC0 /* FormManagerProtocol.swift in Sources */,
 				25D1DE6A28DB936B00C4DFC0 /* FormView.swift in Sources */,
 				25D1DE7728DBBE7200C4DFC0 /* WebSite.swift in Sources */,
+				2574A3AD29350A0F00BB2F49 /* Navigation.swift in Sources */,
 				25603D8828E78AB400D2164F /* QRBeautifyView.swift in Sources */,
 				255CD85628D7B3170005232F /* CategoryView.swift in Sources */,
 				25D1DE7328DBB40500C4DFC0 /* Instagram.swift in Sources */,
@@ -594,6 +601,7 @@
 				256EF29B28E4571300D8B8BB /* DataController.swift in Sources */,
 				252E21DB28E233D6007D7900 /* QRScanDetailView.swift in Sources */,
 				25D1DE6F28DBB3EE00C4DFC0 /* Spotify.swift in Sources */,
+				25D9DDB82936096D00AA9FD3 /* Navigate.swift in Sources */,
 				252F41B428D7434200CF4E66 /* ViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

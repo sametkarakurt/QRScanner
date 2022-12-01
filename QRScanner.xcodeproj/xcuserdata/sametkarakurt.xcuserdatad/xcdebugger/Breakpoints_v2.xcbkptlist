@@ -3,4 +3,54 @@
    uuid = "9480A476-A3FD-441B-96F6-3053C62D652A"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA4E9EAE-730D-4360-92FF-0E1BF215AD64"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRScanner/Feature/Generate/GenerateView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "GenerateView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "CA4E9EAE-730D-4360-92FF-0E1BF215AD64 - 6b1f13bbc1712ac2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRScanner.GenerateView.init() -&gt; QRScanner.GenerateView"
+                  moduleName = "QRScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sametkarakurt/QRScanner-master/QRScanner/Feature/Generate/GenerateView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "CA4E9EAE-730D-4360-92FF-0E1BF215AD64 - bda03a62d65b9400"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRScanner.GenerateView.init(categoryProvider: QRScanner.CategoryProvider) -&gt; QRScanner.GenerateView"
+                  moduleName = "QRScanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sametkarakurt/QRScanner-master/QRScanner/Feature/Generate/GenerateView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

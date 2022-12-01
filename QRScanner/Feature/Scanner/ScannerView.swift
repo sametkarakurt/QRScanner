@@ -27,6 +27,7 @@ struct ScannerView: View {
                     EmptyView()
                 }
                 
+                
 
        
             }.edgesIgnoringSafeArea(.all)

@@ -94,6 +94,7 @@ struct QRGenerateDetailView: View {
         let activityController = UIActivityViewController(activityItems: [qrDetail.qrCode], applicationActivities: nil)
         
         UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
+    
     }
     
     func save() {

@@ -83,6 +83,7 @@ struct HistoryView: View {
                         .onDelete(perform: deleteGeneratedQR)
                     }
                 }
+                NavigationLink(destination: EmptyView(), label: {})
                 
                 
                 

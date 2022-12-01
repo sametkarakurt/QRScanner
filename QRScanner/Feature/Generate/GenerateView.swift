@@ -43,6 +43,7 @@ struct GenerateView: View {
                         
                         
                     }
+                    .navigationViewStyle(StackNavigationViewStyle())
                 }
             }
             .padding([.horizontal, .bottom])
